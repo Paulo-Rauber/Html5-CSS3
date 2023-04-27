@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sombras nas caixas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+        }
+        header{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+           
+        }
+        nav{
+            background-color: rgb(175, 159, 159);
+            padding: 3px;
+            /*Sombra nas caixas - box-Shadow: h-offset v-offset embaçamento/esplhamento cor*/
+            box-shadow: 1px 1px 1px black;
+        }
+        nav > a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+      
+        nav > a:hover{
+            text-decoration:underline;
+        }
+        main{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+        article{
+            background-color: lightgray;
+        }
+        article > aside{
+            background-color: rgb(226, 170, 170);
+        }
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            margin: 2px;
+        }
+        footer > p {
+            margin:0px;
+        }
+    </style>
+</head>
+<!--Não confundir cabeça (head), com cabeçalho(header) Head = Configurações do site Header = conteúdo do site, por isso dentro do body-->
+<body>
+    <!--Cabeçalho-->
+    <header>
+        <h1>Meu site</h1>
+        <!--Quero criar um menu "nav"-->
+        <nav>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+
+
+    </header>
+    <!--Conteúdo principal-->
+    <main>
+        <section id="assuntos">
+            <p>Esportes Política Tecnologia</p>
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Notícias sobre o Brasil</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores minima quibusdam, error temporibus culpa voluptatum veniam corporis, ratione inventore ab non hic molestias? Recusandae nobis rerum saepe, harum adipisci architecto.</p>
+                <aside>
+                    <p>Artigo escrito por José da Silva</p>
+                </aside>
+            </article>
+        </section>
+    </main>
+    <!--Rodapé-->
+    <footer>
+        <p>Desenvolvido por Paulo Fernando Rauber</p>
+    </footer>
+</body>
+</html>

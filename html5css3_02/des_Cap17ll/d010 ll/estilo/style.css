@@ -1,0 +1,197 @@
+@charset "UTF-8";
+/*Regra para importar fonte do google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/*Regra para importar fontes de arquivo de fontes*/
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+}
+
+:root{
+    
+    --cor00:#c5ebd6;
+    --cor01:#83E1AD;
+    --cor02:#3DDC84;
+    --cor03:#2FA866;
+    --cor04:#1A5C37;
+    --cor05:#063D1E;
+    --fonte-padrao:Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+  
+}
+*{
+    margin: 0px;
+    padding: opx;
+}
+body{
+    background-color:var(--cor01);
+    font-family: var(--fonte-padrao);
+}
+a.externo::after{
+    /*Inseirir o clip do link*/
+    content: '\00A0\1F517';
+
+}
+
+header{
+    padding-top: 40px;
+    background-color: var(--cor04);
+    background-image: linear-gradient(to bottom, var(--cor03), var(--cor04));
+    min-height: 140px;
+    text-align: center;
+}
+header > h1 {
+    margin-bottom: 20px;
+    color:white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    text-shadow: 6px 5px 9px rgb(52, 51, 51);
+    font-weight: normal;
+}
+header > p{
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    color: white;
+    max-width: 600px;
+    margin: auto;
+    padding-left: 10px;
+}
+nav{
+    background-color: var(--cor05);
+    padding: 10px;
+    box-shadow: 0px 5px 7px rgb(129, 128, 128);
+}
+nav > a{
+    color: white;
+    padding: 10px;
+    /*tira o sublinhado*/
+    text-decoration: none;
+    border-radius: 5px;
+    /*Quando passar o mouse por cima do menu, ele vai demorar 2s para responder*/
+    transition-duration: 2s;
+}
+nav > a:hover{
+    background-color: var(--cor03);
+    color: var(--cor04);
+}
+main{
+    min-width: 300px;
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgb(96, 94, 94);
+    margin-bottom: 30px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+main h1{
+    color: var(--cor05);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+main h2{
+    font-family: var(--fonte-android);
+    font-weight: normal;
+     color: var(--cor04);
+     font-size: 1.3em;
+     /*Gradiente linear para direito da cor01 até a transparência*/
+     background-image: linear-gradient(to right, var(--cor01), transparent);
+     text-indent: 5px;
+}
+main p{
+    margin: 15px 0px;
+    text-align: justify;
+    /*fazer recuo do início do parágrado. O "tab"*/
+    text-indent: 25px;
+    /*altura da linha*/
+    line-height: 1.15em;
+    /*Tamanho da fonta*/
+    font-size: 1em;
+}
+main strong{
+    color: var(--cor03);
+    /*Espessura da fonte*/
+    font-weight: bold;
+    padding: 2px 5px;
+}
+main a{
+    text-decoration: none;
+    color: var(--cor05);
+    font-weight: bold;
+    background-color: var(--cor01);
+    padding: 2px 5px;
+}
+main a:hover{
+    text-decoration: underline;
+}
+main img{
+    width: 100%;
+
+}
+main img.pequena{
+    /*para centralizar a imagem, não basta '1margin:auto;', pois uma imagem não é considerada
+    um bloco. Então preciso, primeiro, do 'display:block', para após utilizar 'margin:auto'.*/
+    display: block;
+    margin: auto;
+    max-width: 300px;
+}
+div.video{
+    background-color: var(--cor05);  
+    padding: 20px;
+    margin: 0px -10px 30px -10px;
+    /*Para começar a ajustar o videio dentro da div, uso positio-relativa na div.video*/
+    position: relative;
+    padding-bottom: 59%;
+ }
+div.video > iframe{
+    /*Depois de colocar 'position:relative' na div.video, aqui coloco 'position.absolute'*/
+    position: absolute;
+    /*Qdo uso "position:absolute", possso usar top, left, Width e height para posicionar o video, o iframe dentro da div.video. Então vamos ajustando a porcentagem ao tamanho da tag*/
+    top: 5%;
+    left: 3%;
+    width: 95%;
+    height: 90%;
+    /*Com o video ajustado, dá play. Após o play, verá que fica uma barra escura, preta nos lado do video. Então Consegue ajustar, mexendo no padding-bottom lá da tag div.video ajustando a porcentagem*/
+ }
+aside{
+    background-color: var(--cor00);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px rgb(144, 143, 143);
+}
+aside > h3{
+    background-color: var(--cor03);
+    color: white;
+    padding: 5px;
+    margin: -10px -10px 0px -10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+aside ul{
+    list-style-type: '\2714';
+    list-style-position: inside;
+}
+footer{
+    background-color: var(--cor05);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+footer a:hover{
+    text-decoration: underline;
+    color: blue;
+    }
+
+
+
