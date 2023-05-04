@@ -4,19 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundo Fixo de Tela</title>
 </head>
 <style>
     body{
+        height: 100vh;
         background-color: black;
         background-image: url('imagens/wallpaper002.jpg');
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
+        background-attachment: fixed;
+
+        /*Shorthand - background
+          color > image > position > repeat > [size] > attachment
+          obs: o material no site oficial do html menciona o size, conforme especifiquei acima, mas na prática, ele não funciona, então para que a shorthand funcione, preciso tirar ele.
+          Esta seria a Shorthand pela w3c
+          background: black url('imagens/wallpaper002.png') center center no-repeat cover fixed;
+          Esta seria a shorthand que funciona:
+          background: black url('imagens/wallpaper002.png') center center no-repeat fixed;
+          E para o conteúdo ficar igual, deveríamos então fazer o seguinte:display:
+          background: black url('imagens/wallpaper002.png') center center no-repeatfixed;
+          background-size: cover;
+          */ 
     }
     main{
         background-color: white;
-        width: 400px;
+        max-width: 400px;
         padding: 10px;
         margin: auto;
         border: 1px solid darkblue;
