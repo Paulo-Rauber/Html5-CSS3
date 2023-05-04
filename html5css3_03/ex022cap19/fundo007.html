@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centralização vertical e horizontal em contêineres</title>
+</head>
+<style>
+    section#container{
+        background-image: url('imagens/target001.png');
+        background-size: 100% 100%;
+        /*lembrando: A propriedade Margin é para alinhamento horizontal*/
+        /*Para alinhamento vertical usamos outra propriedade;
+        E para o conteúdo porder ser alinhado, além de horizontalmente, também verticalmente precisamos:
+        1º - Definir a posição relativa;*/
+        position: relative;
+        height: 94vh;
+        padding: 10px;
+        background-color: purple;
+    }
+    article#conteudo{
+        background-image: url('imagens/target001.png');
+        background-size: 100% 100%;
+        height: 200px;
+        width: 400px;
+        background-color: yellow;
+        /* 2º - Depois que a posição está relativa no container, precisamos fazer a posição do conteúdo ficar absoluta:*/
+        position: absolute;
+        /*3º - Depois q a posição estiver absoluta, podemos configurar as posições que queremos */
+        left: 50%;        
+        top: 50%;
+        /*right:50%;
+          bottom:50%;/*
+        /* 4º - Uso a propriedade transform e função translate;
+                Aqui, nesta propriedade e com esta função, posiciono
+                onde eu quero a imagem ou o conteúdo*/
+        transform: translate(-50%,-50%);
+        /*transform: translate(50%, 50%);*/
+
+    }
+</style>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>
