@@ -10,14 +10,11 @@
     --fonte2: 'Passion One', cursive;
     --fonte3: 'Sriracha', cursive;
 }
-
 *{
     margin: 0px;
     padding: 0px;
-    font-size: 1em;
-    
+    font-size: 1em;    
 }
-
 html, body {
     min-height: 100vh;
     background-color: darkgray;
@@ -40,13 +37,10 @@ header > h1{
     font-family: var(--fonte2);
     /*Esta propriedade, não é a melhor maneira, mas é uma forma de se ajustar ao tamanho da tela -> Viewport Widht*/
     font-size: 10vw;
-
-
 }
 header > p {
     padding-bottom: 40px;
 }
-
 header a, footer a {
     color: white;
     /*Tirar o sublinhado*/
@@ -56,7 +50,6 @@ header a, footer a {
 header a:hover, footer a:hover{
     text-decoration: underline;
 }
-
 section{
     padding-top: 10vh;
     padding-bottom: 10vh;
@@ -65,20 +58,37 @@ section{
     font-family: var(--fonte3);
     font-size: 3.5vw;
 }
+section > p{
+    padding-bottom: 1em;
+}
 section.normal{
     background-color: white;
     color: black;
 }
-
 section.imagem{
-    background-color: rgb(131, 125, 125);
+    background-color: rgb(51, 51, 51);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.791);
+    background-size: cover;
+    /*Este é o efeito paralax*/
+    background-attachment: fixed;
 }
-
 section.imagem > p{
     display: inline-block;
-    background-color: black;
     padding: 5px;
+    background-color: rgba(0, 0, 0, 0.514);
+    text-shadow: 2px 2px 0px black;
+}
+section#img01 {
+    background-image: url('../imagens/background001.jpg');
+    /*poscionar a imagem*/
+    background-position: right center;
+    /*imagem ficou muito grande*/
+    background-size: cover;
+}
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
+
 }
 
 footer{
