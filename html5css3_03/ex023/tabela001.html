@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABELAS EM HTML</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        td{
+            border: 1px solid black;
+            padding: 8px;
+            /*alinhamento horizontal dos dados: por padrão, alinha à esquerda.
+            Posso alinhar: esquerda ->Left; centro-> center; direita->right*/
+            text-align: center;
+            /*alinhamento vertical dos dados: verical-align
+            Por padrão é middle -> centro
+            posso alinha abaixo -> bottom
+            posso alinhar acima -> top;super */
+            vertical-align: ;
+        }
+        table{
+            width: 400px;
+            height: 400px;
+
+            /*Nova propriedade
+            Por padrão, as linhas da tabela são separadas(separate);
+            Mas eu quero juntas as linhas, então uso o valor "collapse" */
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <H1>Minha Primeira Tabela</H1>
+    <!--Devo abrir a tag table-->
+    <!--HIERARQUIA DE TABELS SIMPLES-->
+    <!--TABLE = tabela
+        TABLE ROW = Linha de tabela
+        TABLE HEADER = cabeçalho de tabela
+        TABLE DATA = Dado da tabela
+    -->
+    <table>
+        <!--Primeiro linha - Table Row-->
+        <tr> <!--Primeira Linha!-->
+            <!--Depois os dados Table Data-->
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr class="linha"> <!--Segunda Linha!-->
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+        <tr><!--Terceira Linha-->
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+        <tr><!--Quarta Linha-->
+            <td>A4</td>
+            <td>B4</td>
+            <td>C4</td>
+        </tr>
+        <!--O fechamento destas Tags não obrigatório no html5, mas é aconselhável usar o fechamento-->
+        
+
+    </table>
+</body>
+</html>
