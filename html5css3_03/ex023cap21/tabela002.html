@@ -12,6 +12,8 @@
         table{
             width: 500px;
             border-collapse: collapse;
+            /*Para poder faze o cabeçalho fixo, primeiro preciso colocar posição relativa*/
+            position: relative;
         }
         th{
             border: 1px solid black;
@@ -30,6 +32,13 @@
         thead{
             background-color: gray;
             color: white;
+        }
+        /*SEgundo, Para fixar o cabeçalho de uma tabela. Quando ela for muito grande preciso grudas, colar o cabeçalho 'thead", o TR e o TH*/
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: gray ;
+
         }
         /*Para colocar o EFEITO ZEBRADO na tabela ":nth-child(xn)" onde xn é
           onde ele coloca a tarja: (2n) de 2 em 2 linhas; (3n)-> de 3 em 3 linhas;
