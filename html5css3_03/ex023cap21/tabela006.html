@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 21 Aula 13 - Agrupando Colunas com Colgroup</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width: 500px;
+            border-collapse: collapse;
+        }
+        caption{
+            font-size: 1.3em;
+            font-weight: bolder;
+            padding: 8px;
+        }
+        th, td{
+            border: 1px solid black;
+            padding: 8px;
+        }
+        /*4º E ENTÃO EU POSSO MONTAR O ESTILO PARA A COLUNA QUE EU QUISER 
+             E ESTE ESTILO IRÁ CONFIGURAR TODA A COLUNA*/
+        col.cnome{
+            background-color: chartreuse;
+        }
+        col.csexo, col.cidade{
+            background-color: yellow;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Agrupando Colunas com Colgroup</h1>
+        <!--OU SELECIONANDO TODAS AS CÉLULAS DA COLUNA-->
+    <table>
+        <!--NO HTML5 TEM UMA TAG PARA ESTE FIM, A TAG <COLGROUP><COLGROUP/>-->
+            <colgroup>
+                <!--1 º PRECISO VER QTAS COLUNAS TENHO NA TABELA. NO MEU EXEMPLO TENHO 4 COLUNAS-->
+                <!--2 º DEPOIS COLOCO AS TAGS DE COLUNA <COL> 4 VEZES.
+                        OBS: COL NÃO TEM TAG DE FECHAMENTO-->
+                <col class="cnome"> <!--3 º DEPOIS COLOCA UM CLASSE OU UM ID PARA ESTAS 4 COLUNAS-->
+                <col class="csexo">
+                <col class="cidade">
+                <col class="cprof">
+            </colgroup>
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>F</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Claudio</td>
+            <td>M</td>
+            <td>28</td>
+            <td>Programador</td>
+        </tr>
+        <tr>
+            <td>Gustavo</td>
+            <td>M</td>
+            <td>30</td>
+            <td>Sapateiro</td>
+        </tr>
+        <tr>
+            <td>Helio</td>
+            <td>M</td>
+            <td>32</td>
+            <td>Vendedor</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>F</td>
+            <td>39</td>
+            <td>Médica</td>
+        </tr>
+        <tr>
+            <td>Otávio</td>
+            <td>M</td>
+            <td>22</td>
+            <td>Nutricionista</td>
+        </tr>
+
+    </table>
+</body>
+</html>

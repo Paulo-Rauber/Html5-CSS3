@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 21 Aula 14 - Tabelas Responsivas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        caption{
+            font-size: 1.2em;
+            font-weight: bolder;
+            padding: 20px;
+        }
+        th, td{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        /*EFEITO ZEBRADO*/
+        tr:nth-child(even){
+            background-color: lightgrey;
+        }
+        /*ESTA CONFIGURAÇÃO FAZ SOMENTE A TABELA MEXER QDO MEXO A BARRA DE ROLAGEM.
+          O TEXTO, ALI DO PARÁGRADO, FICA PARADO.*/
+        div#container{
+            overflow-x:auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabelas Responsivas</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam commodi provident corrupti quas vitae, rem ex, culpa neque dolore tenetur hic iste odio minima necessitatibus quo magni qui! Dicta, adipisci.</p>
+    <!--PARA DEIXAR A TABELA RESPONSIVA, SE AJUSTAR A QUALQUER TELA SEM QUE APAREÇA BARRA DE ROLAGEM:
+        1º sELECIONO TODA A TABELA, DO <TABLE> ATÉ </TABLE>;
+        2º CRIO UMA <DIV></DIV>;
+        3º CRIO UM ID PARA ESTA <DIV>, NO MEU EXEMPPLO ID="CONTAINER";
+        4º CRIO UMA CONFIGURAÇÃO PARA ESTA <DIV ID="CONTAINER"> CHAMADA:
+            OVERFLOW -> CONTEÚDO QUE TRANSBORDA!
+            OVERFLOW -> SÃO OS DOIS EIXOS;
+            OVERFLOW-Y -> ROLAGEM VERTICAL;
+            OVERFLOW-X -> ROLAGEM HORIZONTAL;
+
+    -->
+    <DIV id="container">
+        <table>
+            <caption>Tabelas Responsivas</caption>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>jan</th>
+                    <th>fev</th>
+                    <th>mar</th>
+                    <th>abr</th>
+                    <th>mai</th>
+                    <th>jun</th>
+                    <th>jul</th>
+                    <th>ago</th>
+                    <th>set</th>
+                    <th>out</th>
+                    <th>nov</th>
+                    <th>dez</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>TV 40"</td>
+                    <td>01</td>
+                    <td>07</td>
+                    <td>04</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>Home Theater</td>
+                    <td>01</td>
+                    <td>07</td>
+                    <td>04</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>Sansumg Galaxy 20</td>
+                    <td>01</td>
+                    <td>07</td>
+                    <td>04</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>iPad Mini</td>
+                    <td>01</td>
+                    <td>07</td>
+                    <td>04</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>PlayStation4</td>
+                    <td>01</td>
+                    <td>07</td>
+                    <td>04</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>Lava Louças</td>
+                    <td>01</td>
+                    <td>07</td>
+                    <td>04</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>Amazon Echo</td>
+                    <td>01</td>
+                    <td>07</td>
+                    <td>04</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                </tr>
+        
+            </tbody>
+        </table>
+    </DIV>
+    
+</body>
+</html>
