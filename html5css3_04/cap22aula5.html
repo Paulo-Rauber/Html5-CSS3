@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pr-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navegação no Iframe</title>
+    <title>Aula05</title>
     <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            background-color:lightblue;
+            color: blue;
         }
         iframe#tela{
             width: 90%;
             border: 2px solid black;
             height: 700px;
-
-
         }
     </style>
-    
 </head>
 <body>
-    <h1>Navegação no Iframe</h1>
+    <h1>Conteúdo Estático em Iframe</h1>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus commodi eaque nam odit! Consequuntur expedita explicabo fugit, dignissimos nam illo deleniti nulla? In ipsa provident nobis maxime omnis, mollitia aperiam?</p>
     <ul>
         <li><a href="exemplos/exe01aula3.html" target="frame">Primeira Página</a></li>
@@ -27,7 +28,11 @@
         <li><a href="exemplos/ex02aula04.html" target="frame">Terceira Página</a></li>
     </ul>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores fugit eligendi ab mollitia excepturi quo libero reprehenderit quibusdam expedita doloremque iste cum voluptates modi magni numquam, alias nulla impedit perspiciatis sed obcaecati voluptate. Iste quisquam maiores officia. Deleniti vel accusantium, magni cupiditate laborum molestias molestiae atque quas excepturi optio velit explicabo soluta quisquam quidem debitis tempore iusto neque laboriosam reprehenderit officia nesciunt numquam omnis aliquam illo. Quaerat quasi iusto sapiente atque consequatur qui tempora, at architecto asperiores officia officiis dicta impedit earum deleniti eveniet itaque magni? Facere, hic ipsum soluta atque vitae qui velit, id ea omnis esse modi quam?</p>
-    <iframe id="tela" name="frame" src="">
+    <!--No lugar do parâmetro "src", utilizaremos o parâmetro "srcdoc"-> Com este podemos escrever um conteúdo e colocar dentro do Iframe para que ele não fique vazio.
+    Posso colocar Títulos, parágrafos, imagens, etc.-->
+    <iframe id="tela" name="frame" srcdoc="<h1>Escolha uma das opções acima!</h1>
+                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui hic officia totam, aspernatur harum fugit modi nulla dolores dolorum, animi consectetur consequuntur earum aut expedita id, doloremque illum. Molestias, nemo!</p>
+                                            <img src='imagens/logo.png'>">
         <p>Infelizmente seu navegador não é compatível com isso.</p>
     </iframe>
 
