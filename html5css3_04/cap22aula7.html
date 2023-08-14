@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tornando Iframes Seguros</title>
+</head>
+<body>
+    <h1>Meu site Principal</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit voluptas magnam explicabo doloribus iste deleniti nulla nesciunt earum optio? Nulla ut sed ratione aut sint quas atque beatae! Illum, porro!</p>
+
+    <!--Se você quiser bloqueas qualquer ação potencialmente maliciosas com seus Iframes, basta usar a propriedade "sandebox=""sandbox"-> sandbox recebe sandbox-->
+    <!--Uma outra maneira de deixar seu site um pouco mais seguro, é usar a propriedade "referrerpolicy=""no-refere-when-downgrade"-> sendo este seu valor padrão.-->
+    <iframe src="exemplos/exe04aula07.html" frameborder="1" sandbox="sandbox" referrerpolicy="no-refere-when-downgrade">
+        Seu navegador não é compatível com isso...
+    </iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ullam veniam labore ut esse sit officia velit cupiditate, illum suscipit consequatur, quisquam ipsam nihil incidunt ducimus hic voluptates nesciunt aliquam.
+    </p>
+    
+</body>
+</html>
