@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprimorando Formulário</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprimorando formulário</h1>
+    <!--Todo fromulário tem que estar entre a tag "<form </form""-->
+        <!--Geralmente eu uso um formulário para coletar dados e enviar para algum lugar. Envio estes dados para JavaScript, PhP e outras linguagens. Para isso eu faço uma ação através do atributo action dentro do elemento form -->
+    <form action="cadastro.php" autocomplete="off">
+        <!--Autocomplete="off"-> serve para eliminar aquele preenchimento automático dos formulários. Que é o autocompletar. Qdo coloca seta do mouse emcima, aparece dados que já foram escritos anteriormente. O autocomplete tira isso. PS: no chrome não funcionou -->
+        <!--Para criar a caixinha do lado do nome-->
+        <p><label for="inome">Nome:</label> 
+            <!--Label é para relacionar ao nosso input. Não se faz formulário sem relacionar o campo com o dado. Em nosso ezxemplo: o Campo nome, com o dado nome. -->
+            <input type="text" name="nome" id="inome">
+        </p>
+        <p><label for="isobrenome">Sobrenome: </label>
+            <!--Label é para relacionar ao nosso input. Não se faz formulário sem relacionar o campo com o dado. Em nosso ezxemplo: o Campo sobrenome, com o dado sobrenome. -->
+            <input type="text" name="sobrenome" id="isobrenome">
+        </p>
+        <!--Para criar o botãosinho-->
+        <p> <!--O botão submit envia a ação solicitada no action do form.-->
+            <input type="submit" value="Enviar">
+        </p>
+        
+    </form>
+
+    
+</body>
+</html>
