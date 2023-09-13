@@ -1,40 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Envios de Formulário</title>
-    <style>
-        *{
-            font-family: Arial, Helvetica, sans-serif;
-        }
-    </style>
+    <title>Document</title>
 </head>
 <body>
-    <h1>Métodos de envio de formulários - GET E POST</h1>
-    <!--Todo fromulário tem que estar entre a tag "<form </form""-->
-        <!--Geralmente eu uso um formulário para coletar dados e enviar para algum lugar. Envio estes dados para JavaScript, PhP e outras linguagens. Para isso eu faço uma ação através do atributo action dentro do elemento form -->
-    <form action="cadastro.php" method="post" autocomplete="off">
-        <!--Existem dois métodos de envio de formulários, Get e Post. Get é o method padrão. Neste método os dados "nome" e "sobrenome", serão colocados na URL. O Post não os dados "nome" e "sobrenome" não são enviados para a URL.
-        Method Get -> Até 3mil bytes; dados não sensíveis;
-        Method Post -> para que os dados não apareçam na url, acima de 3mil dados, dados sensíveis, fotos, arquivos-->
-        <!--Autocomplete="off"-> serve para eliminar aquele preenchimento automático dos formulários. Que é o autocompletar. Qdo coloca seta do mouse emcima, aparece dados que já foram escritos anteriormente. O autocomplete tira isso. PS: no chrome não funcionou -->
-        <!--Para criar a caixinha do lado do nome-->
-        <p><label for="inome">Nome:</label> 
-            <!--Label é para relacionar ao nosso input. Não se faz formulário sem relacionar o campo com o dado. Em nosso ezxemplo: o Campo nome, com o dado nome. -->
-            <input type="text" name="nome" id="inome">
+    <h1>Teste Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <!--O atributo autocomplete dentro da elemento form me dá somente duas opções: on e off-->
+        <p>
+            <!--Cria a label Usuário-->
+            <label for="iusu">Usuário</label>
+            <!--Cria o campo para digitar o usuário; type:text-->
+            <input type="text" name="usu" id="iusu" required minlength="8" maxlength="20" size="20" placeholder="Nome do Usuário" autocomplete="username">
+            <!--O atributo Required, dentro do elemento input, significa obrigatório-->
+            <!--Os atributos minlength e maxlength limita qtde de dados em número mínio e número máximo-->
+            <!--O atributo size limita a quantidade de letras que o campo irá mostrar na caixa. O tamanho da caixa.
+            Se size < maxlength, tu pode digitar as letras, mas a caixa mostra somente a qtde que tu estipulou no size-->
+            <!--Placeholder significa espaço reservado. Aqui tu pode dizer ao usuário o que digitar na caixa.-->
+            <!--O atributo autocomplete dentro do elemento input, abre muitas possibilidades.-->
         </p>
-        <p><label for="isobrenome">Sobrenome: </label>
-            <!--Label é para relacionar ao nosso input. Não se faz formulário sem relacionar o campo com o dado. Em nosso ezxemplo: o Campo sobrenome, com o dado sobrenome. -->
-            <input type="text" name="sobrenome" id="isobrenome">
+        <p>
+            <!--Cria a label senha-->
+            <label for="isen">Senha</label>
+            <!--Cria o campo para digitar a senha. Veja que o Type é password-->
+            <input type="password" name="sen" id="isen" required minlength="8" maxlength="10" size="20" placeholder="Mínimo 8 letras" autocomplete="current-password">
         </p>
-        <!--Para criar o botãosinho-->
-        <p> <!--O botão submit envia a ação solicitada no action do form.-->
+        <p>
+            <!--Cria o botão enviar; type submit-->
             <input type="submit" value="Enviar">
+            <!--Cria o botão limpar; type reset-->
+            <input type="reset" value="Limpar">
         </p>
-        
+        <!--Veja que criamos este form com o method:get. O que acontece? Acontece que com method:get, ao clicar no botão enviar, os dados de usuário e senha irão para a url. Para que isso não aconteça, mudamos para method:post-->
     </form>
-
     
 </body>
 </html>
