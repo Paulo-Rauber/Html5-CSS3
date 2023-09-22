@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox e Rádio</title>
+</head>
+<body>
+    <h1>Exemplo Checkbox e Rádio</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Sexo</legend>
+            <!--Para o type radio, não podemos deixar marcar as duas bolinhas, isto acontece porque nema está diferente. Em nosso exemplo:sxmas e sxfem. Para poder marcar uma só opção, ou seja, ou masculino, ou feminino, devemos colocar name iguais. Por exemplo:name=sexo-->
+            <!--Se eu quero que uma das opções apareça marcada, devo colocar o atributo "checked" dentro do elemento input-->
+            <input type="radio" name="sexo" id="isxmas" value="M" checked ><label for="isxmas">Masculino </label><br>
+            <input type="radio" name="sexo" id="isxfem" value="F"><label for="isxfem">Feminino</label><br>
+        </fieldset>
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+            <input type="checkbox" name="esbas" id="iesbas" checked> <label for="iesbas">Basquete</label> <br>
+            <input type="checkbox" name="esfut" id="iesfut"> <label for="iesfut">Futebol</label> <br>
+            <input type="checkbox" name="esnat" id="iesnat"> <label for="iesnat">Natação</label> <br>
+            <input type="checkbox" name="esten" id="iesten"> <label for="iesten">Tênis</label> <br>
+            <!--Depois de criar os inputs, relacionar onome com o checkbox através da tag label. Pq? Para que ao clicar no nome, na palavra, flague o Chackbox-->
+        </fieldset>
+        <p>
+            <input type="submit" value="enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
