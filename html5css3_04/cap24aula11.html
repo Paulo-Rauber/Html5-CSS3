@@ -1,64 +1,69 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Output em formulários HTML</title>
+    <title>Output em Formulários HTML</title>
 </head>
 <body>
-    <h1>Output em Formulários HTML</h1>
-    <form action="cadastro.php" method="post">
+    <h1>Capítulo 24 aula 11 - Output em HTML</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
         <p>
-            <label for="iest">Estado</label>
-            <!--Para criarmos a seleção dos estados, usaremos a tag select, pois esta abre a opção de lista. -->
-            <select name="estado" id="iest">
-                <!--1.1 SELECTED - Mas o que normalmente é feito com o atributo selected é o seguinte: Cria um option para que a pessoa escolha o estado; exemplo:-->
-                <option value="" selected>...Escolha...</option>
-                <!--Para agrupar por região, vou usar a tag optgroup e dentro desta tag consigo usar uma atributo label. Obs: Não é label elemento, é label atributo, neste caso.-->
-                <optgroup label="Região Sudeste">
-                    <!--1 SELECTED - Para selecionar o estado que eu quero que apareça, uso o atributo selected. É só colocar o atributo no estado desejado. NÃO ESQUECER DE VER A OBSERVAÇÃO 1.1 SELECTED, ACIMA!!!!-->
-                    <option value="MG">Minas Gerais</option>
-                    <option value="RJ">Rio de Janeira</option>
-                    <option value="SP">São Paulo</option>
-                </optgroup>
-
-                <optgroup label="Região Nordeste">
-                    <option value="MA">Maranhão</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                </optgroup>
-
-                <optgroup label="Região Sul">
-                    <option value="PR">Paraná</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="SC">Santa Catarina</option>
-                </optgroup>
-            </select>
-            <p>
-                <!--Para Criar uma caixa que eu possa escolher e digitar, por exemplo, profissões, usa-se a tag datalist. veja exemplo abaixo:-->
-                <label for="iprof">Profissão</label>
-                <input type="text" name="prof" id="iprof" list="lstprof">
-                <datalist id="lstprof">
-                    <option value="ADM">Administrador</option>
-                    <option value="CO">Contador</option>
-                    <option value="DEV">Desenvolvedor</option>
-                    <option value="PROF">Professor</option>
-                    <!--OBS: Se eu quiser, posso tirar o value aqui do option, e aparecerá somente a lista normal, com o nome completo da profissão, que nós escrevemos entre a tag option-->
-                </datalist>
-            </p>
-            <!--Para criar uma área de mensagem, usaremos a tag textarea-->
-            <!--E quando usar a tag textarea, usa o method post, pois aí não tem limitação na quantidade de dados-->
-            <p>
-                <label for="imsg">Mensagem</label><br>
-                <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
-            </p>
+            <label for="in1">Número 1:</label>
+            <input type="number" name="1" id="in1" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
             
+        </p>
+        <p>
+            <label for="in2">Número 2:</label>
+            <input type="number" name="2" id="in2" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+            <label for="isoma">Soma:</label>
+            <!--Output é somente para somar e mostrar coisas na tela, no próprio formulário. Não é para enviar nada.-->
+            <output name="soma" id="isoma">0</output>
+        </p>
+        <p>
+            <input type="submit" value="enviar">
+            <input type="reset" value="Limpar">
+        </p>
+        <p>
+            =======================================<br>
+            =======================================
+        </p>
+        <p>
+            <label for="inum">Número:</label>
+            <input type="range" name="num" id="inum" min="0" max="10" value="5" oninput="ival.innerHTML = Number(inum.value)">
+            <output id="ival">5</output>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+        <p>
+            =======================================<br>
+            =======================================
+        </p>
+        <p>
+            <label for="iano">Em que ano você nasceu?</label>
+            <input type="number" name="ano" id="iano" min="1900" max="2023" value="2000" oninput="calcIdade()">
+        </p>
+        <p>
+            <label for="iidade">Sua idade é:</label>
+            <output id="iidade">0</output>
+        </p>
+        <p>
             <p>
                 <input type="submit" value="Enviar">
                 <input type="reset" value="Limpar">
             </p>
         </p>
     </form>
+    <script>
+        function calcIdade(){
+            let atual = new Date().getFullYear()
+            iidade.innerHTML = Number(atual) - Number(iano.value)
+        }
+    </script>
     
 </body>
 </html>
