@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Query - Media Features </title>
+    <title>Media Query - Aula 5 - Configurar as Mideas dentro HTML style</title>
     <style>
         /*Declarações Gerais*/
     *{
@@ -25,23 +25,25 @@
     }
 
         /*Decalarações Retrato*/
-    @media screen and (orientation:portrait) {
+    @media screen and (orientation: portrait){
         body{
-            background-image: url(../Imagens/cev-portrait.jpg);
+            background-image: url(Imagens/cev-portrait.jpg);
             background-position: center bottom;
         }
     }
 
         /*Desclarações Paisagem*/
-    @media screen and (orientatin:landscape) {
+    @media screen and (orientation:landscape){
         body{
-            background: url(../Imagens/cev-landscape.jpg);
+            background-image: url(Imagens/cev-landscape.jpg);
             background-position: left bottom;
-        }    
+        }
     }
+    
     </style>
 </head>
 <body>
+    <h1>Presta atenção que a declaração da Media está sendo feita dentro do CSS Style, não mais no HTML</h1>
     <h1>Mude a orientação do dispositivo</h1>
     
 </body>
