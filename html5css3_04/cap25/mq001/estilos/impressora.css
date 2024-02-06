@@ -11,8 +11,10 @@ html{
     line-height: 1.5em;
 }
 menu{
+    /*Para não exibir o menu na versão para impressão.*/
     display: none;
 }
+/*Para imprimir ao final do article esta informação*/
 article::after{
     content: 'Esse artigo foi impresso através do site cursoemvideo.com';
 }
