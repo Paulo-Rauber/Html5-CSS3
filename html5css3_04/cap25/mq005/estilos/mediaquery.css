@@ -28,8 +28,17 @@ GRANDES TELAS: ACIMA DE 1200PX;
     img#print {display: block;}
     img#pc {display: none;}
     img#tv{display: none;}
+}
+/*----------------------------------------------------------------------------------------------------
+@media screen and (max-width:600px){
 
 }
+
+@media screen and (min-width: 600px) and (max-width:768px){
+
+}*/
+/*Como eu já configurei primeiro a versão mobile first, dispositivos pequenos, aqui no meida query eu posso simplesmente ignorar estas configurações.
+------------------------------------------------------------------------------------------------------*/
 
 @media screen and (min-width: 768px) and (max-width: 992px){ /*TABLLET*/
     body{
