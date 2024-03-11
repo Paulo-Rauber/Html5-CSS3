@@ -10,10 +10,12 @@
             border: 2px solid black;
             padding: 5px;          
             display: flex;
+            /*para ver o reflexo do flex-direction:column; é preciso aumentar a altura do elemento */
+            height: 100px;
             /*flex-direction: row-reverse;
             flex-wrap: wrap-reverse;*/
             /*As duas declarações acima podem ser feitas através do Flex-Flow, como abaixo:*/
-            flex-flow: row nowrap;
+           flex-flow: column wrap;
         }
         div.item{
             background-color: lightskyblue;
