@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        div.container{
+            background-color: lightsalmon;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /*Ou flex-flow: row nowrap;*/
+        }
+        div.item{
+            background-color: lightskyblue;
+            border: 1px solid black;          
+            text-align: center;
+            flex-basis: 150px;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">Minha mãe é uma querida!</div>
+        <div class="item">Meu pai também!</div>
+        <div class="item">D</div>
+        <div class="item">Meu pai chama-se Paulo Rauber</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        
+
+    </div>
+</body>
+</html>
